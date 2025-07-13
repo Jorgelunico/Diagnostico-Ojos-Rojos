@@ -20,6 +20,10 @@ Este proyecto es una aplicación web desarrollada con Streamlit que utiliza mode
 - `requirements.txt`: Dependencias de Python necesarias para ejecutar la aplicación.
 - `Dockerfile`: Archivo para construir una imagen Docker con la aplicación.
 
+## Datos de Muestra
+Los datos de muestra no están incluidos en este repositorio. Puede descargar los datos desde el siguiente enlace de Kaggle:
+https://www.kaggle.com/datasets/gunavenkatdoddi/eye-diseases-classification/data
+
 ## Instalación y Ejecución
 
 ### Requisitos Previos
