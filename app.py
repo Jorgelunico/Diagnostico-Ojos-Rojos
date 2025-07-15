@@ -249,7 +249,7 @@ with tab2:
             # Calcular métricas para cada modelo
             metrics = [
                 {
-                    'model': 'Modelo 1',
+                    'model': 'Modelo 1 (CNN Simple)',
                     'accuracy': 0.807,
                     'sensitivity': 0.776,
                     'specificity': 0.926,
@@ -257,7 +257,7 @@ with tab2:
                     'mcc': 0.709,
                 },
                 {
-                    'model': 'Modelo 2',
+                    'model': 'Modelo 2 (CNN Profundo)',
                     'accuracy': 0.932,
                     'sensitivity': 0.923,
                     'specificity': 0.974,
@@ -265,15 +265,27 @@ with tab2:
                     'mcc': 0.900,
                 },
                 {
-                    'model': 'Modelo 3',
+                    'model': 'Modelo 3 (CNN ResNet)',
                     'accuracy': 0.899,
                     'sensitivity': 0.895,
                     'specificity': 0.965,
                     'f1': 0.894,
                     'mcc': 0.863,
                 }
-            ]            # confusion_matrices = []
-            
+            ] 
+
+            st.subheader("Detalles:")       
+            st.text("El dataset se obtubo de: https://www.kaggle.com/datasets/gunavenkatdoddi/eye-diseases-classification/data ")     
+            st.text("El total de figuras usadas son de 4236")
+            st.text("Los modelos que usan son: modelo 1 (CNN Simple), modelo 2 (CNN Profundo), modelo 3 (CNN ResNet)")
+            st.text("Las epocas usadas son de: 56")
+            st.text("Los modelos en total se demoraron en entrenar aproximadamente : 24 horas")
+            st.text("El mejor modelo es: El modelo 2 (CNN Profundo) con una precision de 0.932")
+            st.subheader("Detalles de herramientas usadas:")
+            st.text("Detalles de hadware del servicio de Google Colab usado para entrenar el modelo: \nRAM del sistema: 12.7GB\nRAM de la GPU: 15.0GB\nDisco: 112.6GB")
+            st.text("""Python 3.9, Docker Engine==28.3.2, Google Colab==Python 3.10., streamlit==1.36.0, tensorflow==2.18.0, numpy==1.26.4, 
+                    pandas==1.5.3, matplotlib==3.9.0, seaborn==0.12.2, Pillow==9.5.0, scikit-learn==1.2.2
+                    scipy==1.10.1, pdfkit==1.0.0, pyyaml==6.0, wkhtmltopdf==0.12.6""")
             mcnemar_data = [
                 {'Modelos Comparados': 'Modelo 1 vs Modelo 2', 'Chi-square statistic': 187.000, 'P-Value': 0.0000, 'Significancia (alpha=0.05)': 'Sí'},
                 {'Modelos Comparados': 'Modelo 1 vs Modelo 3', 'Chi-square statistic': 284.000, 'P-Value': 0.0000, 'Significancia (alpha=0.05)': 'Sí'},
